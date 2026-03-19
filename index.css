@@ -1,0 +1,50 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Custom styles for ROKOF.LV */
+
+@media print {
+  /* Hide navigation, buttons, and other non-invoice elements */
+  nav, 
+  footer, 
+  button, 
+  .no-print,
+  [role="navigation"],
+  [role="banner"] {
+    display: none !important;
+  }
+
+  /* Ensure the main content takes full width */
+  main, 
+  #root, 
+  body {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+  }
+
+  /* A4 Page Settings */
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+  }
+
+  /* Prevent table rows from breaking across pages */
+  tr {
+    page-break-inside: avoid !important;
+  }
+
+  /* Ensure text is black for better printing */
+  body {
+    color: #000 !important;
+  }
+}
+
+/* Global Typography Styles */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-feature-settings: 'cv05', 'cv08', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
